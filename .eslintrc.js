@@ -17,3 +17,21 @@ module.exports = {
   },
   ignorePatterns: ['03-files-in-folder/secret-folder/**/*.js'],
 };
+{
+  "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "react-app",
+    "react-app/jest",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "prettier/prettier": ["warn",  {"endOfLine": "auto"}], 
+    "testing-library/prefer-screen-queries": "error",
+    "testing-library/no-manual-cleanup": "error",
+    "testing-library/prefer-wait-for": "error",
+    "testing-library/no-await-sync-events": "error",
+  }
+}
